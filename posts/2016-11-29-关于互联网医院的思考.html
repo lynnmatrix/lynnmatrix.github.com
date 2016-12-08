@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <!-- X-UA -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <link rel="author" title="林以明" />
+
+    <meta name="google" content="notranslate" />
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- index ROBOTS follow -->
+    <meta name="robots" content="index, follow" />
+    <!-- Site Desciption -->
+    <!-- <meta name="description" content="林以明の博客"> -->
+    <!-- Site Desciption -->
+    <meta name="keywords" content="林以明, linym">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://localhost:8000/imgages/ico.png" type="image/x-icon" />
+    <!-- Blog Title -->
+    <title>林以明の博客</title>
+
+    <!--     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+-->
+    <!-- Property Metas -->
+    <!-- <meta property="og:image" content="http://localhost:8000/static/img/ix.png" />
+    <meta property="og:title" content="林以明の博客" />
+    <meta property="og:site_name" content="林以明の博客" /> -->
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- StyleSheet -->
+    <!-- <link rel="stylesheet" href="/static/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="http://localhost:8000/css/spaceg.stylesheets.css">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/css/pantone_s2016.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/css/pss2016mobile.css" />
+
+    <link rel="stylesheet" href="http://localhost:8000/css/syntax.css">
+
+    <!-- Syntax Highlighting -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/r8kvge2/AHNnmwufl/shbrushhaskell.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushDiff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeEclipse.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            /* change if the mask should have another color then white */
+            z-index: 99;
+            /* makes sure it stays on top */
+        }
+        
+        #status {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            /* centers the loading animation horizontally one the screen */
+            top: 50%;
+            /* centers the loading animation vertically one the screen */
+            background-image: url("/images/preloader.gif");
+            /* path to your loading animation */
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: -100px 0 0 -100px;
+            /* is width and height divided by two */
+        }
+        
+        ul,
+        ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .navbar-inverse {
+            background-color: #FFF;
+            border-color: #FFFFFF;
+        }
+    </style>
+    <!--link rel="stylesheet" href="/static/css/prettify.css"-->
+    <style>
+        header.intro-header {
+            background: #6f5499;
+            background: no-repeat center center;
+            background-attachment: scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
+        /* Preloader */
+        
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            /* change if the mask should have another color then white */
+            z-index: 99;
+            /* makes sure it stays on top */
+        }
+        
+        #status {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            /* centers the loading animation horizontally one the screen */
+            top: 50%;
+            /* centers the loading animation vertically one the screen */
+            background-image: ;
+            /* path to your loading animation */
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: -100px 0 0 -100px;
+            /* is width and height divided by two */
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        body.modal-open {
+            overflow: hidden;
+            padding-right: 0px;
+        }
+        
+        .article li {
+            list-style: inherit;
+        }
+        
+        .article .figure {
+            text-align: center
+        }
+    </style>
+    <!-- end Loading front stylesheet here -->
+</head>
+
+
+<body>
+    <div id="preloader">
+        <div id="status">
+        </div>
+    </div>
+
+    <h2 class="header"><a href="http://lynnmatrix.github.com">&nbsp;</a></h2> <div class="sidebar">
+
+    <div class="me">
+        <img src="http://localhost:8000/images/ml.jpeg" width="100%" class="avatar" alt>
+        <div class="caption">Hi :)</div>
+    </div>
+    <p class="me">林以明</p>
+    <p class="me"><a href="http://chunyujujia.com">春雨居佳医生</a> CTO</p>
+
+    <div class="sidebar-text">
+        <section class="meta">
+
+            <a href="https://www.github.com/lynnmatrix"><i class="fa fa-github"></i></a>
+
+            <a href="http://linkedin.com/in/lynnmatrix"><i class="fa fa-linkedin"></i></a>
+
+            <a href="https://plus.google.com/u/0/104570750407591619127/posts" target="_blank"> <i class="fa fa-google-plus"></i></a>
+
+        </section>
+    </div>
+
+    <br />
+
+    <div class="pageslinks">
+        <nav class="menuNav">
+            <div class="menuItems">
+                <a href="../"><span>Home</span></a>
+                <a href="../about.html"><span>About</span></a>
+                <a href="../contact.html"><span>Contact</span></a>
+                <a href="../archive.html"><span>Archive</span></a>
+            </div>
+        </nav>
+    </div>
+    <!--/pageslinks-->
+</div>
+
+    <div class="container-gallery">
+        <div class="inside">
+            
+<h1>关于互联网医院的思考</h1>
+
+<div class="info">
+  
+      林以明
+   November 29, 2016
+    
+</div>
+
+<p>周末旁听了一场关于“互联网医院”的论坛，与会者有好大夫王航、康康血压曾明发、芯联达杨宏桥、阿里健康某总监等。</p>
+<p>我们先聊聊各家在互联网医院领域的动作，之后聊聊我的一些思考。</p>
+<h2 id="百家争鸣">百家争鸣</h2>
+<p>总的来说，各家在互联网医院方向都还处于初步探索的阶段，各家的出发点和形式各不相同。</p>
+<p>康康专注做血压管理，其在贵州互联网医院为血压专科医院。题外话，较认可曾明发对医疗的敬畏之心，基于这点他们的血压管理服务不做首诊，专注做首诊之后的随诊。其人气质较专注、认真，有静下心来磨的心气。</p>
+<p>好大夫的优势在于其较高质量的医生资源，目前其互联网医院可以理解为互联网飞刀模式。该模式的交易的由飞刀医生发起，并负责协调目标地医疗点（手术室等）；区别于传统的线下飞刀，由目标地医生邀请飞刀医生，并提供医疗点。题外话，相较于曾明发的认真，王航更加从容、有高度。</p>
+<p>芯联达从医院+互联网的角度切入，在医院现有HIS上做信息共享，商业模式是SaaS。题外话，杨总讲话较个性，让我怀疑自己在看京剧表演，尤其是其配合慷慨激昂的语调不时‘振动’的头部。</p>
+<p>这次大家都没谈拿到互联网医院执照后如何利用线上诊断开展业务。</p>
+<h2 id="我的思考">我的思考</h2>
+<h3 id="为什么要做互联网医院">为什么要做互联网医院</h3>
+<h4 id="传统医疗的主要问题">传统医疗的主要问题</h4>
+<p>传统医疗的主要问题:<br />
+1. 资源稀缺<br />
+2. 资源不均<br />
+3. 资源浪费</p>
+<p>这里的资源包括医生、硬件、知识等，具体问题不展开。</p>
+<h4 id="互联网医院的优势">互联网医院的优势</h4>
+<p>互联网医院的核心是电子处方，有了这个东西之后，互联网医疗就可以从咨询，也就说所谓的轻问诊，转到真正的线上医疗行为。所以这两年互联网医院在贵州、宁夏等省份蜂拥而起，主要目的还是尽快拿到这个牌照。</p>
+<p>互联网的优势在于可以打破时间空间的限制，起到降低信息不对称性，从而优化资源配置的作用。</p>
+<p>具体到上述提到的医疗上的各个问题，首先，互联网医院短期无法从总体上解决资源稀缺的问题，但可以协助加强基层医疗水平和数量。</p>
+<p>其次，互联网可以更方便地将北上广的优质资源向基层倾斜。（好大夫擅长）</p>
+<p>再者，互联网医院可以将目前占门诊60%的复诊放在线上，从而节约医疗资源；互联网医院以其便捷性，并通过打造医生个人品牌，逐渐改变类似‘首诊也去三甲’这些不合理的就诊行为，推动分级诊疗，当然我认为改变这种行为最有效的工具还是价格；互联网医院可以帮助解决基层医院硬件资源闲置的问题。（春雨擅长）</p>
+<h3 id="战略">战略</h3>
+<h4 id="心态">心态</h4>
+<p>对待帝国主义，伟人说要“战略上藐视，战术上重视”。</p>
+<p>对待互联网医疗改革，我认为恰似相反，战略上应该做到“敬畏心、耐心、信心”。</p>
+<p>我一直认为互联网从业者是幸运的，因为这个群体更容易将情怀与事业结合在一起，因此这个群体也盛产有情怀的人。我们在沉迷于“技术改变世界”理想的同时，也应该清醒的认识到医疗有其独特性。性命攸关，必须有“敬畏心”；利益关系盘根错节、行为习惯根深蒂固，需要有“耐心”；大势所趋、百姓翘首，因此可以有”信心”。</p>
+<h4 id="思路">思路</h4>
+<p>互联网医院的核心价值在于通过优化医疗流程优化医疗资源配置。<br />
+也就是说不应奢望重建现有的医疗体系。</p>
+<h3 id="战术">战术</h3>
+<p>在思考建立什么样的互联网医院时，我们可能会遇到一些抉择，比如这两个问题：<br />
+1. 轻 VS. 重<br />
+2. 全科 VS. 专科</p>
+<p>每种选择都各有优劣，各方可以根据自身的特点选择合适的方向，然后坚持走下去。医疗是很大的市场，淘宝、京东都不错，都可以很好的活下去。</p>
+<p>但总的来说，随着多点执业、自由职业的放开，互联网医院可以进一步打破空间限制，让医生从医院解放出来，因此互联网医院应该建立“由医生主导，以用户为中心，双向评价”体系。</p>
+<p>我设想的一种结构是这样的，通过电子处方和医疗信息共享将医疗各相关角色组织，较目前的医疗流程，有两点最主要的变化：<br />
+1. 资源独立。医生、手术室等可以脱离医院（实际运营中可以同时隶属于医院）<br />
+2. 增加家医角色，作为用户的健康守门人，起到引流和协调的作用，同时负责常见疾病处理和健康管理。</p>
+<p>用户、家医、诊所、医院、自由医生、药商、保险、手术室、检测中心、各色医疗服务（康复、护理、慢病管理、体检等）</p>
+<p>举个例子，用户不小心崴了脚，询问自己的家医，家医判断可能伤了骨头，建议用户先拍个片子，并推荐骨科医生A，用户同意后，骨科医生A跟家医协商后帮助用户预约检测中心B，用户检测后，骨科医生A远程确诊骨折，需要做手术，跟用户协商后约定手术室C（A、C可能在同一家诊所）。手术结束后、骨科医生A跟用户及其家庭医生交代康复事宜，之后的随诊由家庭医生负责，必要时再次联系骨科医生A。期间的费用、保险、检测数据、处方等医疗信息在一定的安全保障下共享。</p>
+<p>家庭医生的收入由医保和用户以预付方式的支付。</p>
+<h3 id="路线">路线</h3>
+<p>自由执业、医药分离、医保支付、家医的推广等关键任务均需要较长时间逐步实现，因此互联网医院的发展也是一个渐进的过程。</p>
+
+<!--An embeddable script that makes source-code snippets in HTML prettier. -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script> 
+
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    var disqus_shortname = 'lynnmatrix-github-com'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </div>
+    </div>
+
+    <div id="footer">
+    <div class="inside">
+        <div id="attribution">
+            &copy; 2016. ALL RIGHTS RESERVED. GENERATED WITH <a href="http://jaspervdj.be/hakyll/">HAKYLL</a>. &nbsp; &nbsp;
+            <a href="http://localhost:8000/archive.html"><i class="fa fa-archive"></i> </a> &nbsp;&nbsp;
+            <a href="http://localhost:8000/atom.xml" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme"> <i class="fa fa-rss"></i> </a>
+        </div>
+    </div>
+</div>
+
+<script src="http://localhost:8000/js/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="http://localhost:8000/js/scripts.js"></script>
+
+
+</body>
+
+</html>
