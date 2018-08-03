@@ -199,10 +199,10 @@
     <div class="pageslinks">
         <nav class="menuNav">
             <div class="menuItems">
-                <a href="./index.html"><span>Home</span></a>
-                <a href="./about.html"><span>About</span></a>
-                <a href="./contact.html"><span>Contact</span></a>
-                <a href="./archive.html"><span>Archive</span></a>
+                <a href="../index.html"><span>Home</span></a>
+                <a href="../about.html"><span>About</span></a>
+                <a href="../contact.html"><span>Contact</span></a>
+                <a href="../archive.html"><span>Archive</span></a>
             </div>
         </nav>
     </div>
@@ -211,46 +211,45 @@
 
     <div class="container-gallery">
         <div class="inside">
-            All previous posts:
-<div class="content">
+            
+<h1>读'Detecting Text in Natural Image with Connectionist Text Proposal Network'</h1>
 
+<div class="info">
   
-  <h2 class="section">2017</h2>
-  <ul class="listing">
+      林以明
+   2018-08-03 10:01
     
-    <li>
-      <span>August  4, 2017</span> <a href="./posts/2017-08-04-%E8%AF%BB%E3%80%8A%E5%BE%B7%E5%B7%9D%E5%AE%B6%E5%BA%B7%E3%80%8B.html">读《德川家康》</a>
-    </li>
-    
-  </ul>
-  
-  <h2 class="section">2016</h2>
-  <ul class="listing">
-    
-    <li>
-      <span>December 30, 2016</span> <a href="./posts/2016-12-30-2016%E5%B9%B4%E4%B9%A6%E5%8D%95.html">2016年总结之书单</a>
-    </li>
-    
-    <li>
-      <span>November 25, 2016</span> <a href="./posts/2016-11-25-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%80blog.html">为什么开blog</a>
-    </li>
-    
-    <li>
-      <span>November 25, 2016</span> <a href="./posts/2016-11-25-%E5%86%99%E7%82%B9%E5%95%A5.html">写点啥</a>
-    </li>
-    
-    <li>
-      <span>November 25, 2016</span> <a href="./posts/2016-11-25-%E7%94%A8%E4%BB%80%E4%B9%88%E5%86%99.html">用什么写</a>
-    </li>
-    
-    <li>
-      <span>November 29, 2016</span> <a href="./posts/2016-11-29-%E5%85%B3%E4%BA%8E%E4%BA%92%E8%81%94%E7%BD%91%E5%8C%BB%E9%99%A2%E7%9A%84%E6%80%9D%E8%80%83.html">关于互联网医院的思考</a>
-    </li>
-    
-  </ul>
-  
-
 </div>
+
+<h2 id="目标">目标</h2>
+<p>解决对象识别算法无法精准识别文字行水平位置的问题。 ## 思路 检测宽度固定（小尺度，16px）的小文本块，然后RNN连起来形成文本行。</p>
+<h2 id="ctpn">CTPN</h2>
+<p><img src="../images/CTPN.png" alt="CTPN" /> 小文本快检测方法借鉴Fast-RCNN，用宽度固定、高度可变（K个尺度）的anchor。</p>
+<pre><code>The key insight is that a single window is able to predict objects in a wide range of scales and aspect ratios, by using a number of flexible anchors.</code></pre>
+<p>小文本块连成文本行利用双向LSTM</p>
+<p>输出：score, 垂直位置和高度，水平位置</p>
+<p>loss: <img src="../images/loss.png" alt="loss" /> <img src="../images/relative_coordinates.png" alt="rc" /> <mark><em>疑问：在计算预测box和真实box距离时，真实box采用跟预测box重叠最大的box，而非跟输入窗口重叠最大的box</em></mark></p>
+
+<!--An embeddable script that makes source-code snippets in HTML prettier. -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script> 
+
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    var disqus_shortname = 'lynnmatrix-github-com'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
         </div>
